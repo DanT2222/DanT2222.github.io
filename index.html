@@ -1,0 +1,729 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Dan Tran — Software Engineer</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700&family=Cinzel:wght@400;600;700&family=EB+Garamond:ital,wght@0,400;0,500;1,400&family=Share+Tech+Mono&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+
+  <!-- ── NAVIGATION ──────────────────────────────────────────── -->
+  <nav class="nav">
+    <div class="nav-row">
+
+      <a href="#" class="nav-name">
+        Dan Tran
+        <span class="cursor"></span>
+      </a>
+
+      <div class="nav-links">
+        <a href="#experience" class="nav-link">Experience</a>
+        <a href="#education"  class="nav-link">Education</a>
+        <a href="#skills"     class="nav-link">Skills</a>
+        <a href="#projects"   class="nav-link">Projects</a>
+        <a href="#contact"    class="nav-link">Contact</a>
+      </div>
+
+    </div>
+  </nav>
+
+
+  <!-- ── HERO ─────────────────────────────────────────────────── -->
+  <header class="hero">
+    <div class="container">
+      <div class="hero-card">
+
+        <!-- Engraved corner labels — like rune text on armor -->
+        <span class="card-corner tl">Tarnished</span>
+        <span class="card-corner tr">ID · DT-2026</span>
+        <span class="card-corner bl">Minnesota</span>
+        <span class="card-corner br">© 2026</span>
+
+        <div class="hero-layout">
+
+          <div class="hero-photo-col">
+            <div class="hero-photo">🧙</div>
+            <p class="hero-photo-caption">CS Student</p>
+          </div>
+
+          <div class="hero-info-col">
+
+            <h1 class="hero-name">Dan Tran</h1>
+            <p class="hero-role">Software Engineer · University of Minnesota</p>
+
+            <p class="hero-bio">
+              Computer Science student at the University of Minnesota, Twin Cities,
+              currently working as a Software Engineering Intern. Experienced in
+              full-stack development, graphics programming, and building educational
+              tools that help young learners explore code.
+            </p>
+
+            <!-- Stat bars — each maps to a real skill area -->
+            <div class="stats-grid">
+              <div>
+                <p class="stat-label">Programming</p>
+                <div class="stat-track"><div class="stat-fill s1" style="animation-delay:0s"></div></div>
+              </div>
+              <div>
+                <p class="stat-label">Algorithms</p>
+                <div class="stat-track"><div class="stat-fill s2" style="animation-delay:0.1s"></div></div>
+              </div>
+              <div>
+                <p class="stat-label">Web / Full-Stack</p>
+                <div class="stat-track"><div class="stat-fill s3" style="animation-delay:0.2s"></div></div>
+              </div>
+              <div>
+                <p class="stat-label">Graphics / GPU</p>
+                <div class="stat-track"><div class="stat-fill s4" style="animation-delay:0.3s"></div></div>
+              </div>
+              <div>
+                <p class="stat-label">System Design</p>
+                <div class="stat-track"><div class="stat-fill s5" style="animation-delay:0.4s"></div></div>
+              </div>
+              <div>
+                <p class="stat-label">Collaboration</p>
+                <div class="stat-track"><div class="stat-fill s6" style="animation-delay:0.5s"></div></div>
+              </div>
+            </div>
+
+            <div class="hero-links">
+              <a href="mailto:dantran2023@gmail.com" class="hero-link-btn">✉ Email</a>
+              <a href="tel:6124612830"                class="hero-link-btn">📞 Phone</a>
+              <a href="https://github.com"   target="_blank" class="hero-link-btn">⌨ GitHub</a>
+              <a href="https://linkedin.com" target="_blank" class="hero-link-btn">🔗 LinkedIn</a>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+
+  <main>
+
+    <div class="container"><div class="rune-divider">✦ · · · ✦ · · · ✦</div></div>
+
+
+    <!-- ── EXPERIENCE — EXPANDABLE CARDS ─────────────────────────
+         Each card shows: type · title · company · date · badge.
+         Click the card (or the [X] Examine hint) to expand
+         a details panel that slides open — like pressing X to
+         read an item description in Elden Ring.
+         JS at the bottom handles the open/close toggle.
+         ──────────────────────────────────────────────────────── -->
+    <section id="experience" class="section">
+      <div class="container">
+
+        <div class="section-header fade-in">
+          <span class="section-label">Experience</span>
+          <h2 class="section-title">Work History</h2>
+          <div class="section-rule"></div>
+        </div>
+
+        <div class="exp-list">
+
+          <!-- CARD 1: Internship — gold left stripe (main quest) -->
+          <div class="exp-card fade-in" id="exp-1">
+
+            <!-- Summary row — always visible, click to expand -->
+            <div class="exp-summary" onclick="toggleExp('exp-1')" role="button" aria-expanded="false">
+              <!-- role="button" + aria-expanded tell screen readers this is interactive -->
+
+              <div class="exp-summary-left">
+                <p class="exp-type">Internship</p>
+                <h3 class="exp-title">Software Engineering Intern</h3>
+                <p class="exp-company">Aubot · San Francisco, CA (Remote)</p>
+              </div>
+
+              <div class="exp-summary-right">
+                <span class="exp-badge current">● Current</span>
+                <p class="exp-dates">Jan 2026 – Present</p>
+                <!-- Elden Ring "examine item" prompt -->
+                <div class="exp-examine-hint">
+                  <span class="hint-key">✕</span>
+                  Examine
+                  <span class="hint-arrow">▼</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Details panel — hidden until card is clicked -->
+            <div class="exp-details-panel" id="exp-1-panel">
+              <div class="exp-details-inner">
+
+                <!-- Short italic lore line — gives personality without losing clarity -->
+                <p class="exp-lore">
+                  "A remote forge where young adventurers learn the ancient arts of code."
+                </p>
+
+                <ul class="exp-bullet-list">
+                  <li>Designed and tested coding exercises in Python, Java, C, JavaScript, SQL, and Assembly for an interactive platform serving 200+ learners ages 5–18.</li>
+                  <li>Built AI-themed challenges covering machine learning, computer vision, and NLP with real-world applications.</li>
+                  <li>Collaborated remotely to write feature specs, monitor student progress, and ship projects end-to-end.</li>
+                  <li>Applied graph traversal, dynamic programming, and sorting algorithms in real educational exercises.</li>
+                </ul>
+
+                <div class="exp-tags">
+                  <span class="exp-tag">Python</span>
+                  <span class="exp-tag">Java</span>
+                  <span class="exp-tag">JavaScript</span>
+                  <span class="exp-tag">SQL</span>
+                  <span class="exp-tag">Machine Learning</span>
+                  <span class="exp-tag">Agile</span>
+                </div>
+
+              </div>
+            </div>
+
+          </div><!-- end exp-card 1 -->
+
+
+          <!-- CARD 2: Research — past, gray left stripe -->
+          <div class="exp-card past fade-in" id="exp-2">
+
+            <div class="exp-summary" onclick="toggleExp('exp-2')" role="button" aria-expanded="false">
+              <div class="exp-summary-left">
+                <p class="exp-type">Research</p>
+                <h3 class="exp-title">Qualitative Research Assistant</h3>
+                <p class="exp-company">UMN Dept. of Music Therapy · Minneapolis, MN</p>
+              </div>
+              <div class="exp-summary-right">
+                <span class="exp-badge complete">✓ Complete</span>
+                <p class="exp-dates">Jan 2023 – May 2023</p>
+                <div class="exp-examine-hint">
+                  <span class="hint-key">✕</span>
+                  Examine
+                  <span class="hint-arrow">▼</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="exp-details-panel" id="exp-2-panel">
+              <div class="exp-details-inner">
+
+                <p class="exp-lore">
+                  "A quieter quest — mapping the uncharted territories of human experience."
+                </p>
+
+                <ul class="exp-bullet-list">
+                  <li>Investigated experiences of individuals transitioning into music therapy, under Dr. Silverman, Director of Music Therapy.</li>
+                  <li>Assisted with data collection, literature review, and thematic analysis.</li>
+                  <li>Developed qualitative inquiry methodology and research documentation skills.</li>
+                </ul>
+
+                <div class="exp-tags">
+                  <span class="exp-tag">Research</span>
+                  <span class="exp-tag">Data Analysis</span>
+                  <span class="exp-tag">Documentation</span>
+                  <span class="exp-tag">Thematic Analysis</span>
+                </div>
+
+              </div>
+            </div>
+
+          </div><!-- end exp-card 2 -->
+
+
+          <!-- CARD 3: Kitchen work — past, gray -->
+          <div class="exp-card past fade-in" id="exp-3">
+
+            <div class="exp-summary" onclick="toggleExp('exp-3')" role="button" aria-expanded="false">
+              <div class="exp-summary-left">
+                <p class="exp-type">Service</p>
+                <h3 class="exp-title">Dishwasher</h3>
+                <p class="exp-company">David Fong's Chinese Cuisine · Savage, MN</p>
+              </div>
+              <div class="exp-summary-right">
+                <span class="exp-badge current">● Current</span>
+                <p class="exp-dates">Feb 2021 – Present</p>
+                <div class="exp-examine-hint">
+                  <span class="hint-key">✕</span>
+                  Examine
+                  <span class="hint-arrow">▼</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="exp-details-panel" id="exp-3-panel">
+              <div class="exp-details-inner">
+
+                <p class="exp-lore">
+                  "Where endurance, efficiency, and calm under fire were forged."
+                </p>
+
+                <ul class="exp-bullet-list">
+                  <li>Processed 500+ dishes per shift with consistent efficiency, regularly exceeding performance expectations.</li>
+                  <li>Adapted quickly to high-pressure situations and surges in workload during peak service hours.</li>
+                  <li>Demonstrated reliability and work ethic over four years of continuous employment.</li>
+                </ul>
+
+                <div class="exp-tags">
+                  <span class="exp-tag">Reliability</span>
+                  <span class="exp-tag">Efficiency</span>
+                  <span class="exp-tag">Teamwork</span>
+                </div>
+
+              </div>
+            </div>
+
+          </div><!-- end exp-card 3 -->
+
+        </div><!-- end .exp-list -->
+      </div>
+    </section>
+
+
+    <div class="container"><div class="rune-divider">✦ · · · ✦ · · · ✦</div></div>
+
+
+    <!-- ── EDUCATION — SPLIT MAJOR / MINOR ───────────────────────
+         Major and minor as separate cards styled like
+         "discovered location" entries on the Elden Ring map.
+         Each has a map icon, a location-type label, and details.
+         ──────────────────────────────────────────────────────── -->
+    <section id="education" class="section">
+      <div class="container">
+
+        <div class="section-header fade-in">
+          <span class="section-label">Education</span>
+          <h2 class="section-title">Academic Path</h2>
+          <div class="section-rule"></div>
+        </div>
+
+        <div class="edu-grid">
+
+          <!-- CARD 1: CS Major -->
+          <div class="edu-card fade-in">
+            <span class="edu-marker">🗺️</span>
+            <!-- Map icon — like a location discovered on the Elden Ring world map -->
+            <p class="edu-location-type">· Major · Discovered ·</p>
+            <h3 class="edu-title">B.A. Computer Science</h3>
+            <p class="edu-institution">University of Minnesota, Twin Cities</p>
+            <p class="edu-desc">
+              Core coursework in algorithms, data structures, systems programming,
+              graphics, software engineering, and object-oriented design.
+            </p>
+            <span class="edu-status">● In Progress — May 2027</span>
+          </div>
+
+          <!-- CARD 2: Tech Writing Minor -->
+          <div class="edu-card fade-in">
+            <span class="edu-marker">📜</span>
+            <p class="edu-location-type">· Minor · Discovered ·</p>
+            <h3 class="edu-title">Technical Communication & Writing</h3>
+            <p class="edu-institution">University of Minnesota, Twin Cities</p>
+            <p class="edu-desc">
+              Technical documentation, specification writing, and communicating
+              complex ideas clearly to both technical and non-technical audiences.
+            </p>
+            <span class="edu-status">● In Progress — May 2027</span>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+
+    <div class="container"><div class="rune-divider">✦ · · · ✦ · · · ✦</div></div>
+
+
+    <!-- ── SKILLS ──────────────────────────────────────────────── -->
+    <section id="skills" class="section">
+      <div class="container">
+
+        <div class="section-header fade-in">
+          <span class="section-label">Skills</span>
+          <h2 class="section-title">Abilities</h2>
+          <div class="section-rule"></div>
+        </div>
+
+        <div class="skills-grid">
+
+          <!-- data-rune = faint watermark symbol behind card content (CSS .skill-card::after) -->
+
+          <div class="skill-card fade-in" data-rune="⚔">
+            <div class="skill-card-header">
+              <div class="skill-icon">⚔️</div>
+              <p class="skill-category">Core Languages</p>
+            </div>
+            <div class="skill-tags">
+              <span class="skill-tag gold">Java</span>
+              <span class="skill-tag gold">Python</span>
+              <span class="skill-tag gold">C</span>
+              <span class="skill-tag gold">C++</span>
+              <span class="skill-tag gold">Assembly</span>
+            </div>
+          </div>
+
+          <div class="skill-card fade-in" data-rune="🌐">
+            <div class="skill-card-header">
+              <div class="skill-icon">🌐</div>
+              <p class="skill-category">Web & Full-Stack</p>
+            </div>
+            <div class="skill-tags">
+              <span class="skill-tag blue">HTML</span>
+              <span class="skill-tag blue">CSS</span>
+              <span class="skill-tag blue">JavaScript</span>
+              <span class="skill-tag blue">TypeScript</span>
+              <span class="skill-tag blue">Node.js</span>
+              <span class="skill-tag blue">Express</span>
+              <span class="skill-tag blue">REST APIs</span>
+              <span class="skill-tag blue">jQuery</span>
+            </div>
+          </div>
+
+          <div class="skill-card fade-in" data-rune="✨">
+            <div class="skill-card-header">
+              <div class="skill-icon">🎮</div>
+              <p class="skill-category">Graphics & GPU</p>
+            </div>
+            <div class="skill-tags">
+              <span class="skill-tag red">3D Transforms</span>
+              <span class="skill-tag red">GPU Shaders</span>
+              <span class="skill-tag red">Ray Tracing</span>
+              <span class="skill-tag red">Physics Sim</span>
+              <span class="skill-tag red">Texturing</span>
+            </div>
+          </div>
+
+          <div class="skill-card fade-in" data-rune="🗄">
+            <div class="skill-card-header">
+              <div class="skill-icon">🗄️</div>
+              <p class="skill-category">Data & Databases</p>
+            </div>
+            <div class="skill-tags">
+              <span class="skill-tag green">SQL</span>
+              <span class="skill-tag green">MySQL</span>
+              <span class="skill-tag green">Firestore</span>
+              <span class="skill-tag green">JSON / XML</span>
+            </div>
+          </div>
+
+          <div class="skill-card fade-in" data-rune="🔧">
+            <div class="skill-card-header">
+              <div class="skill-icon">🔧</div>
+              <p class="skill-category">Dev Tools</p>
+            </div>
+            <div class="skill-tags">
+              <span class="skill-tag purple">Git / GitHub</span>
+              <span class="skill-tag purple">Docker</span>
+              <span class="skill-tag purple">VS Code</span>
+              <span class="skill-tag purple">IntelliJ</span>
+            </div>
+          </div>
+
+          <div class="skill-card fade-in" data-rune="🤖">
+            <div class="skill-card-header">
+              <div class="skill-icon">🤖</div>
+              <p class="skill-category">AI & Algorithms</p>
+            </div>
+            <div class="skill-tags">
+              <span class="skill-tag gold">Machine Learning</span>
+              <span class="skill-tag gold">Computer Vision</span>
+              <span class="skill-tag gold">NLP</span>
+              <span class="skill-tag gold">Dynamic Prog.</span>
+              <span class="skill-tag gold">Graph Traversal</span>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+
+    <div class="container"><div class="rune-divider">✦ · · · ✦ · · · ✦</div></div>
+
+
+    <!-- ── PROJECTS ────────────────────────────────────────────── -->
+    <section id="projects" class="section">
+      <div class="container">
+
+        <div class="section-header fade-in">
+          <span class="section-label">Projects</span>
+          <h2 class="section-title">Work Samples</h2>
+          <div class="section-rule"></div>
+        </div>
+
+        <div class="projects-grid">
+
+          <div class="project-card fade-in">
+            <div class="project-header">
+              <span class="project-icon">🎓</span>
+              <h3 class="project-name">EduCode Platform</h3>
+              <p class="project-type">Educational Software</p>
+              <div class="project-status">
+                <p class="project-status-label">Completion</p>
+                <p class="project-status-value">100%</p>
+                <div class="project-bar-track"><div class="project-bar-fill full"></div></div>
+              </div>
+            </div>
+            <div class="project-body">
+              <p class="project-desc">
+                Interactive coding exercise system for learners ages 5–18. Supports
+                multiple languages, tracks 200+ students, and integrates AI modules.
+              </p>
+              <div class="tech-list">
+                <div class="tech-row"><span class="tech-badge blue">Backend</span> Python · SQL · REST APIs</div>
+                <div class="tech-row"><span class="tech-badge gold">Frontend</span> HTML · CSS · JavaScript</div>
+                <div class="tech-row"><span class="tech-badge green">AI</span> ML · Computer Vision · NLP</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="project-card fade-in">
+            <div class="project-header">
+              <span class="project-icon">🎮</span>
+              <h3 class="project-name">3D Graphics Engine</h3>
+              <p class="project-type">Graphics / GPU Programming</p>
+              <div class="project-status">
+                <p class="project-status-label">Completion</p>
+                <p class="project-status-value">85%</p>
+                <div class="project-bar-track"><div class="project-bar-fill high"></div></div>
+              </div>
+            </div>
+            <div class="project-body">
+              <p class="project-desc">
+                Custom 3D engine covering GPU shaders, polygonal modeling,
+                physics simulation, and a full ray tracer.
+              </p>
+              <div class="tech-list">
+                <div class="tech-row"><span class="tech-badge red">Render</span> GPU Shaders · Ray Tracing</div>
+                <div class="tech-row"><span class="tech-badge purple">Physics</span> Simulation · Scene Graphs</div>
+                <div class="tech-row"><span class="tech-badge gray">Lang</span> C++ · OpenGL</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="project-card fade-in">
+            <div class="project-header">
+              <span class="project-icon">🌐</span>
+              <h3 class="project-name">Full-Stack Web App</h3>
+              <p class="project-type">Web Development</p>
+              <div class="project-status">
+                <p class="project-status-label">Completion</p>
+                <p class="project-status-value">60%</p>
+                <div class="project-bar-track"><div class="project-bar-fill mid"></div></div>
+              </div>
+            </div>
+            <div class="project-body">
+              <p class="project-desc">
+                Full-stack app with Node.js + Express backend, Firestore database,
+                REST API layer, and a responsive React front-end.
+              </p>
+              <div class="tech-list">
+                <div class="tech-row"><span class="tech-badge blue">Backend</span> Node.js · Express · Firestore</div>
+                <div class="tech-row"><span class="tech-badge gold">Frontend</span> React · CSS · TypeScript</div>
+                <div class="tech-row"><span class="tech-badge gray">DevOps</span> Docker · GitHub</div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+
+    <div class="container"><div class="rune-divider">✦ · · · ✦ · · · ✦</div></div>
+
+
+    <!-- ── TOOLS — MAP MARKER STYLE ──────────────────────────────
+         Cards styled like location discoveries on the Elden Ring
+         world map — each has a grace-blue left stripe.
+         ──────────────────────────────────────────────────────── -->
+    <section class="section">
+      <div class="container">
+
+        <div class="section-header fade-in">
+          <span class="section-label">Toolbox</span>
+          <h2 class="section-title">Tools & Tech</h2>
+          <div class="section-rule"></div>
+        </div>
+
+        <div class="tools-grid">
+
+          <div class="tool-card fade-in">
+            <span class="tool-icon">🐳</span>
+            <div>
+              <p class="tool-name">Docker</p>
+              <p class="tool-desc">Containerized deployment and environment management.</p>
+            </div>
+          </div>
+
+          <div class="tool-card fade-in">
+            <span class="tool-icon">🐙</span>
+            <div>
+              <p class="tool-name">Git & GitHub</p>
+              <p class="tool-desc">Version control and collaborative development.</p>
+            </div>
+          </div>
+
+          <div class="tool-card fade-in">
+            <span class="tool-icon">💻</span>
+            <div>
+              <p class="tool-name">VS Code</p>
+              <p class="tool-desc">Primary development environment.</p>
+            </div>
+          </div>
+
+          <div class="tool-card fade-in">
+            <span class="tool-icon">☕</span>
+            <div>
+              <p class="tool-name">IntelliJ IDEA</p>
+              <p class="tool-desc">Java and JVM language development.</p>
+            </div>
+          </div>
+
+          <div class="tool-card fade-in">
+            <span class="tool-icon">📊</span>
+            <div>
+              <p class="tool-name">Office Suite</p>
+              <p class="tool-desc">Word, Excel, PowerPoint and Google Workspace.</p>
+            </div>
+          </div>
+
+          <div class="tool-card fade-in">
+            <span class="tool-icon">🤝</span>
+            <div>
+              <p class="tool-name">Agile / Scrum</p>
+              <p class="tool-desc">Remote team workflows, sprint planning, spec writing.</p>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+
+    <div class="container"><div class="rune-divider">✦ · · · ✦ · · · ✦</div></div>
+
+
+    <!-- ── CONTACT — FOG GATE + BONFIRE ──────────────────────────
+         The fog-gate visual sits above the contact card.
+         "GRACE AHEAD" echoes the famous Elden Ring message system
+         where players leave notes for each other in the world.
+         The bonfire below it is a warm, professional contact section.
+         ──────────────────────────────────────────────────────── -->
+    <section id="contact" class="section">
+      <div class="container">
+
+        <div class="section-header fade-in">
+          <span class="section-label">Contact</span>
+          <h2 class="section-title">Get in Touch</h2>
+          <div class="section-rule"></div>
+        </div>
+
+        <!-- Fog Gate — the animated blue mist wall before a boss room -->
+        <div class="fog-gate fade-in">
+          <div class="fog-wall">
+            <!-- "GRACE AHEAD" — a classic Elden Ring player message -->
+            <p class="fog-text">Grace Ahead</p>
+          </div>
+        </div>
+
+        <!-- Contact card below the fog gate -->
+        <div class="contact-card fade-in">
+
+          <span class="contact-fire">🔥</span>
+
+          <h2 class="contact-heading">Let's Connect</h2>
+          <p class="contact-subheading">Savage, MN · Open to Opportunities</p>
+
+          <div class="contact-links">
+            <a href="mailto:dantran2023@gmail.com" class="contact-btn">✉ Email Me</a>
+            <a href="tel:6124612830"                class="contact-btn grace">📞 (612) 461-2830</a>
+            <a href="https://github.com"   target="_blank" class="contact-btn">⌨ GitHub</a>
+            <a href="https://linkedin.com" target="_blank" class="contact-btn grace">🔗 LinkedIn</a>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+
+  <!-- ── FOOTER ─────────────────────────────────────────────────── -->
+  <footer class="footer">
+    <strong>Dan Tran</strong> &nbsp;·&nbsp; Savage, MN &nbsp;·&nbsp; © 2026
+  </footer>
+
+
+  <!-- ── JAVASCRIPT ─────────────────────────────────────────────── -->
+  <script>
+
+    // ── SCROLL REVEAL ──────────────────────────────────────────
+    const observer = new IntersectionObserver(function(entries) {
+      entries.forEach(function(entry) {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.1 });
+
+    document.querySelectorAll('.fade-in').forEach(function(el) {
+      observer.observe(el);
+    });
+
+
+    // ── STAT BAR ANIMATION RESET ──────────────────────────────
+    const heroCard = document.querySelector('.hero-card');
+    if (heroCard) {
+      const barObserver = new IntersectionObserver(function(entries) {
+        entries.forEach(function(entry) {
+          if (entry.isIntersecting) {
+            entry.target.querySelectorAll('.stat-fill').forEach(function(bar) {
+              bar.style.animation = 'none';
+              void bar.offsetWidth; // Force browser reflow to restart animation
+              bar.style.animation = '';
+            });
+            barObserver.unobserve(entry.target);
+          }
+        });
+      }, { threshold: 0.25 });
+      barObserver.observe(heroCard);
+    }
+
+
+    // ── EXPERIENCE CARD EXPAND / COLLAPSE ─────────────────────
+    // toggleExp(id) is called by onclick on each .exp-summary row.
+    // It adds or removes the .open class on the card.
+    // CSS transitions max-height from 0 to 600px when .open is present,
+    // creating the smooth slide-open animation.
+
+    function toggleExp(cardId) {
+      var card = document.getElementById(cardId);
+      if (!card) return;
+
+      var isOpen = card.classList.contains('open');
+
+      // Close ALL cards first — only one open at a time (like Elden Ring's item menu)
+      document.querySelectorAll('.exp-card').forEach(function(c) {
+        c.classList.remove('open');
+        // Update aria-expanded for accessibility
+        var summary = c.querySelector('.exp-summary');
+        if (summary) summary.setAttribute('aria-expanded', 'false');
+      });
+
+      // If the clicked card was NOT already open, open it
+      if (!isOpen) {
+        card.classList.add('open');
+        var summary = card.querySelector('.exp-summary');
+        if (summary) summary.setAttribute('aria-expanded', 'true');
+      }
+      // If it WAS already open, clicking again just closes it (we already removed .open above)
+    }
+
+  </script>
+
+</body>
+</html>
