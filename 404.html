@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<!--
+  Dan Tran — 404 Page
+  Matches the blueprint theme of the main portfolio.
+  Host this file as 404.html at your site root — GitHub Pages
+  and most static hosts will serve it automatically for any
+  broken link.
+-->
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>404 — Page Not Found · Dan Tran</title>
+  <meta name="robots" content="noindex" />
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' fill='%2307101e'/%3E%3Crect x='2' y='2' width='60' height='60' fill='none' stroke='%234a9eff' stroke-width='2'/%3E%3Ctext x='32' y='42' font-family='monospace' font-size='26' font-weight='bold' fill='%234a9eff' text-anchor='middle'%3EDT%3C/text%3E%3C/svg%3E" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&family=Bebas+Neue&family=Inter:wght@300;400;500&display=swap"
+    rel="stylesheet"
+  />
+
+  <style>
+    :root {
+      --bg-deep:      #07101e;
+      --bg-card:      #0c1a30;
+      --grid-minor:   rgba(120, 170, 255, 0.06);
+      --grid-major:   rgba(120, 170, 255, 0.13);
+      --border-faint: rgba(120, 170, 255, 0.12);
+      --text-bright:  #dce9ff;
+      --text-mid:     rgba(180, 210, 255, 0.6);
+      --text-dim:     rgba(180, 210, 255, 0.3);
+      --blue:         #4a9eff;
+      --blue-light:   #7bbfff;
+      --font-display: 'Bebas Neue', sans-serif;
+      --font-mono:    'Share Tech Mono', monospace;
+      --font-body:    'Inter', sans-serif;
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      background-color: var(--bg-deep);
+      color: var(--text-bright);
+      font-family: var(--font-body);
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 32px;
+      background-image:
+        linear-gradient(var(--grid-minor) 1px, transparent 1px),
+        linear-gradient(90deg, var(--grid-minor) 1px, transparent 1px),
+        linear-gradient(var(--grid-major) 1px, transparent 1px),
+        linear-gradient(90deg, var(--grid-major) 1px, transparent 1px);
+      background-size: 20px 20px, 20px 20px, 100px 100px, 100px 100px;
+    }
+
+    a { color: var(--blue); text-decoration: none; }
+    a:hover { color: var(--blue-light); }
+    a:focus-visible { outline: 2px solid var(--blue-light); outline-offset: 3px; }
+
+    .error-card {
+      max-width: 520px;
+      width: 100%;
+      background: var(--bg-card);
+      border: 1px solid var(--border-faint);
+      padding: 48px 40px;
+      text-align: center;
+      position: relative;
+    }
+
+    .error-card::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0; right: 0;
+      height: 2px;
+      background: linear-gradient(90deg, transparent, var(--blue), transparent);
+    }
+
+    .error-code {
+      font-family: var(--font-display);
+      font-size: 96px;
+      color: var(--blue);
+      letter-spacing: 4px;
+      line-height: 1;
+      margin-bottom: 12px;
+    }
+
+    .error-label {
+      font-family: var(--font-mono);
+      font-size: 11px;
+      color: var(--text-dim);
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      margin-bottom: 24px;
+    }
+
+    .error-message {
+      font-size: 14px;
+      color: var(--text-mid);
+      line-height: 1.7;
+      margin-bottom: 32px;
+    }
+
+    .error-actions {
+      display: flex;
+      gap: 10px;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+
+    .error-btn {
+      font-family: var(--font-mono);
+      font-size: 11px;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      border: 1px solid var(--border-faint);
+      padding: 10px 20px;
+      transition: all 0.2s;
+    }
+    .error-btn:hover {
+      color: var(--bg-deep);
+      background: var(--blue);
+      border-color: var(--blue);
+    }
+  </style>
+</head>
+<body>
+
+  <div class="error-card">
+    <p class="error-code">404</p>
+    <p class="error-label">// Route Not Found</p>
+    <p class="error-message">
+      This path doesn't exist in the schematic. The page you're looking for
+      may have moved, or the link might be out of date.
+    </p>
+    <div class="error-actions">
+      <a href="/" class="error-btn">← Back to Home</a>
+      <a href="mailto:dantran2023@gmail.com" class="error-btn">Contact Me</a>
+    </div>
+  </div>
+
+</body>
+</html>
